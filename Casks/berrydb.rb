@@ -4,11 +4,12 @@ cask "berrydb" do
 
   url "https://github.com/berry-apps/berrydb-desktop/releases/download/v#{version}/BerryDB-#{version}.dmg"
   name "BerryDB"
-  desc "Open-source lightweight native macOS database client"
-  homepage "https://db.berryhub.app"
+  desc "Open-source lightweight native database client"
+  homepage "https://db.berryhub.app/"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on arch: :arm64
+  depends_on macos: :sequoia
 
   app "BerryDB.app"
 
